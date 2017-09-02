@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31-Aug-2017 20:37:21 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="avionskakompanija.Korisnik" table="korisnik" catalog="avionskakompanija" optimistic-lock="version">
+        <id name="idKorisnik" type="java.lang.Integer">
+            <column name="idKorisnik" />
+            <generator class="identity" />
+        </id>
+        <property name="ime" type="string">
+            <column name="ime" length="50" not-null="true" />
+        </property>
+        <property name="prezime" type="string">
+            <column name="prezime" length="50" not-null="true" />
+        </property>
+        <property name="pol" type="char">
+            <column name="pol" length="1" not-null="true" />
+        </property>
+        <property name="datumRodjenja" type="date">
+            <column name="datumRodjenja" length="10" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" not-null="true" />
+        </property>
+        <property name="avioKompanija" type="int">
+            <column name="avioKompanija" not-null="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="50" not-null="true" />
+        </property>
+        <property name="lozinka" type="string">
+            <column name="lozinka" length="10" not-null="true" />
+        </property>
+        <property name="tip" type="string">
+            <column name="tip" length="50" not-null="true" />
+        </property>
+        <property name="status" type="boolean">
+            <column name="status" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

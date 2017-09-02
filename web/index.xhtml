@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+   
+  
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
+        <h:outputStylesheet library = "css" name="login.css"/>
+        <title>LogIn Page</title>
+    </h:head>
+    <h:body id="login">
+            
+    <p:panelGrid columns="2" columnClasses="ui-grid-col-10,ui-grid-col-10" layout="grid" styleClass="ui-panelgrid-blank">
+       
+       <h:form style="float: right">
+           <h:outputLabel value="LOG IN" />
+             <p:messages id="msgs" />
+            <h:panelGrid columns="3">
+              
+               
+                <p:outputLabel value="Korisnicko ime"/>
+                <p:inputText id="username" value="#{logInController.username}" required="true" label="username"/>
+                <p:message for="username"  />
+                <p:outputLabel value="Lozinka"/>
+                <p:inputText value="#{logInController.lozinka}" required="true" label="password"/>
+                <p:message for="password" id="password" />
+            </h:panelGrid>
+           <p:commandButton value="LogIn" action="#{logInController.LogIn}" ajax="false" />
+        </h:form>
+        <h:form>
+             <h:outputLabel value="REGISTRUJ SE" />
+          <h:panelGrid columns="2">
+              
+              <p:outputLabel value="Korisnicko ime"/>
+              <p:inputText value="#{logInController.username}"/>             
+              <p:outputLabel value="Lozinka"/>
+              <p:inputText value="#{logInController.lozinka}"/>
+      
+        
+          </h:panelGrid>
+            <p:commandButton value="RegisterUser" action="#{logInController.RegisterUser}"/>
+        </h:form>   
+        
+    </p:panelGrid>  
+    </h:body>
+</html>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31-Aug-2017 20:37:21 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="avionskakompanija.Avionskakompanija" table="avionskakompanija" catalog="avionskakompanija" optimistic-lock="version">
+        <id name="idAvioKompanije" type="java.lang.Integer">
+            <column name="idAvioKompanije" />
+            <generator class="identity" />
+        </id>
+        <property name="naziv" type="string">
+            <column name="naziv" length="50" not-null="true" />
+        </property>
+        <property name="adresa" type="string">
+            <column name="adresa" length="50" not-null="true" />
+        </property>
+        <property name="zemlja" type="string">
+            <column name="zemlja" length="50" not-null="true" />
+        </property>
+        <property name="vebSajt" type="string">
+            <column name="vebSajt" length="50" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

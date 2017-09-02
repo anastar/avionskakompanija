@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 31-Aug-2017 20:37:21 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="avionskakompanija.Let" table="let" catalog="avionskakompanija" optimistic-lock="version">
+        <id name="idLet" type="java.lang.Integer">
+            <column name="idLet" />
+            <generator class="identity" />
+        </id>
+        <property name="idAerodrom1" type="int">
+            <column name="idAerodrom1" not-null="true" />
+        </property>
+        <property name="idAerodrom2" type="int">
+            <column name="idAerodrom2" not-null="true" />
+        </property>
+        <property name="brojLeta" type="string">
+            <column name="brojLeta" length="50" not-null="true" />
+        </property>
+        <property name="idAviona" type="int">
+            <column name="idAviona" not-null="true" />
+        </property>
+        <property name="trajanjeLeta" type="string">
+            <column name="trajanjeLeta" length="50" not-null="true" />
+        </property>
+        <property name="datumPoletanja" type="date">
+            <column name="datumPoletanja" length="10" not-null="true" />
+        </property>
+        <property name="vremePoletanja" type="time">
+            <column name="vremePoletanja" length="8" not-null="true" />
+        </property>
+        <property name="planiranoVremeDolaskaNaDes" type="timestamp">
+            <column name="planiranoVremeDolaskaNaDes" length="19" not-null="true" />
+        </property>
+        <property name="ocekivanoVremeDolaskaNaDes" type="timestamp">
+            <column name="ocekivanoVremeDolaskaNaDes" length="19" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="50" not-null="true" />
+        </property>
+        <property name="charter" type="boolean">
+            <column name="charter" not-null="true" />
+        </property>
+        <property name="stvarnoVremePoletanja" type="time">
+            <column name="stvarnoVremePoletanja" length="8" not-null="true" />
+        </property>
+        <property name="stvDatumPol" type="date">
+            <column name="stvDatumPol" length="10" not-null="true" />
+        </property>
+        <property name="dterm" type="string">
+            <column name="DTerm" length="50" not-null="true" />
+        </property>
+        <property name="dgate" type="string">
+            <column name="DGate" length="50" not-null="true" />
+        </property>
+        <property name="attTerm" type="string">
+            <column name="AttTerm" length="50" not-null="true" />
+        </property>
+        <property name="attGate" type="string">
+            <column name="AttGate" length="50" not-null="true" />
+        </property>
+        <property name="air" type="java.lang.Integer">
+            <column name="air" />
+        </property>
+    </class>
+</hibernate-mapping>
